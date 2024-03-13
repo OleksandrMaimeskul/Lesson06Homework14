@@ -12,10 +12,12 @@ public class Homework14 {
         int n = scanner.nextInt();
 
         int[][] arrayMN = new int[m][n];
+        int[][] arrayNM = new int[n][m];
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                arrayMN [i][j] = random.nextInt(10);
+                arrayMN[i][j] = random.nextInt(10);
+                arrayNM[j][i] = arrayMN[i][j];
             }
         }
         System.out.println("Initial Matrix: ");
@@ -28,11 +30,10 @@ public class Homework14 {
         System.out.println("Transpose Matrix: ");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                System.out.print(arrayMN[j][i] + ",");
+                System.out.print(arrayNM[i][j] + ",");
             }
             System.out.println();
         }
 
     }
-
 }
